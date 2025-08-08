@@ -115,12 +115,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 charIndex++;
-                setTimeout(typeWriter, 50);
+                setTimeout(typeWriter, 20);
             }
         };
         
-        // Start typing animation after a short delay
-        setTimeout(typeWriter, 500);
+        // Start typing animation immediately
+        setTimeout(typeWriter, 100);
     }
 
     // ===== PORTFOLIO ITEM CLICK HANDLERS =====
