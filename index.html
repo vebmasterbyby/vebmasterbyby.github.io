@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VebMaster.by - Современная веб-студия Олега Медведева</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="/images/my-photo.jpg">
+    <meta name="tg-bot-token" content="8046369799:AAF7fQGOX88-xjPd26RCJOqgSW38rGu_rsw">
+    <meta name="tg-chat-id" content="">
+    <meta name="tg-username" content="vebmasterby">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-code me-2"></i>VebMaster.by
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Портфолио</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Команда</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 col-md-12 hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Создаем <span class="text-gradient">современные</span> веб-сайты<br>
+                            <span class="hero-author">веб студия Олега Медведева</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Разрабатываем уникальные digital-решения, которые привлекают внимание и конвертируют посетителей в клиентов
+                        </p>
+                        <div class="hero-features">
+                            <div class="feature-item">
+                                <i class="fas fa-rocket"></i>
+                                <span>Быстрая разработка</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Адаптивный дизайн</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Безопасность</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-paint-brush"></i>
+                                <span>Индивидуальный дизайн</span>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="https://t.me/vebmasterby" target="_blank" class="btn btn-primary btn-lg pulse-btn">
+                                <i class="fas fa-paper-plane me-2"></i>Связаться
+                            </a>
+                            <a href="#portfolio" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-play me-2"></i>Смотреть работы
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-12 hero-image">
+                    <div class="profile-container">
+                        <div class="profile-image">
+                            <img src="images/my-photo.jpg" alt="Владелец веб-студии" class="img-fluid" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDAwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0ZjQ2ZTU7c3RvcC1vcGFjaXR5OjEiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojN2MzYWVkO3N0b3Atb3BhY2l0eToxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPGNpcmNsZSBjeD0iMjAwIiBjeT0iMTgwIiByPSI2MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMiIvPgo8Y2lyY2xlIGN4PSIyMDAiIGN5PSI0MDAiIHI9IjEwMCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMiIvPgo8dGV4dCB4PSIyMDAiIHk9IjI1MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+4pyFPC90ZXh0Pgo8L3N2Zz4K'">
+                        </div>
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Наши работы</h2>
+                    <p class="section-subtitle">Посмотрите на проекты, которые мы создали для наших клиентов</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/portfolio1_vebmaster.by.webp" alt="Glincogroup.com" class="img-fluid">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Glincogroup.com</h4>
+                            <p>Компания специализируется на реализации промышленных проектов, поставке современного оборудования и качественного сырья для производственных предприятий.</p>
+                            <a href="https://glincogroup.com" target="_blank" class="btn btn-primary">Посмотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/portfolio2_vebmaster.by.webp" alt="Evokorm.ru" class="img-fluid">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Evokorm.ru</h4>
+                            <p>Программно-аппаратный комплекс «Эвокорм» для автоматизации процессов кормления животных на сельскохозяйственных предприятиях.</p>
+                            <a href="https://evokorm.ru" target="_blank" class="btn btn-primary">Посмотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/portfolio3_vebmaster.by.webp" alt="Mayak-bel.by — корпоративный сайт" class="img-fluid">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>shlz.ru</h4>
+                            <p>Структурированный интерфейс, понятная навигация по продукции и полнота разделов создают впечатление надёжного и технологичного партнёра.</p>
+                            <a href="https://shlz.ru/" target="_blank" class="btn btn-primary">Посмотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/portfolio4_vebmaster.by.webp" alt="Svetoforrb.by" class="img-fluid">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>Svetoforrb.by</h4>
+                            <p>Промостраница с акциями, удобными фильтрами и адаптивной версткой для роста конверсии и привлечения клиентов.</p>
+                            <a href="https://svetoforrb.by/" target="_blank" class="btn btn-primary">Посмотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/portfolio5_vebmaster.by.webp" alt="RESPECT (respect-shoes.by)" class="img-fluid">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>respect-shoes.by</h4>
+                            <p>Стильный интернет-магазин обуви и аксессуаров с удобной навигацией, акцентом на качество и бонусной системой.</p>
+                            <a href="https://respect-shoes.by/" target="_blank" class="btn btn-primary">Посмотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/portfolio6_vebmaster.by.webp" alt="APEXMACH — B2B-сайт импортёра CNC-оборудования" class="img-fluid">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>apexmach.com</h4>
+                            <p>B2B-сайт импортёра CNC-оборудования ведущих мировых брендов с лаконичным дизайном и акцентом на эксклюзивность предложения.</p>
+                            <a href="https://apexmach.com/" target="_blank" class="btn btn-primary">Посмотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/portfolio7_vebmaster.by.webp" alt="STULER — e-commerce производитель плетёной мебели из ротанга" class="img-fluid">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>stuler.ru</h4>
+                            <p>Стильный e-commerce ресурс производителя плетёной мебели из ротанга с чистым дизайном и акцентом на качество продукции.</p>
+                            <a href="https://stuler.ru/" target="_blank" class="btn btn-primary">Посмотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/portfolio8_vebmaster.by.webp" alt="SIBAGRO — корпоративный сайт агрохолдинга" class="img-fluid">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>sibagrogroup.ru</h4>
+                            <p>Корпоративный сайт крупного агрохолдинга с полным циклом производства, подчёркивающий масштаб и надёжность компании.</p>
+                            <a href="https://sibagrogroup.ru/" target="_blank" class="btn btn-primary">Посмотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/portfolio9_vebmaster.by.webp" alt="ENKINS — сайт строительной компании домов под ключ" class="img-fluid">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>enkins.by</h4>
+                            <p>Сайт строительной компании домов под ключ с лаконичным дизайном и акцентом на опыт и надёжность бренда.</p>
+                            <a href="https://enkins.by/" target="_blank" class="btn btn-primary">Посмотреть проект</a>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Наши услуги</h2>
+                    <p class="section-subtitle">Полный спектр услуг для вашего digital-присутствия</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>Веб-разработка</h4>
+                        <p>Создаем современные веб-сайты с использованием последних технологий и лучших практик разработки.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Адаптивный дизайн</li>
+                            <li><i class="fas fa-check"></i> SEO-оптимизация</li>
+                            <li><i class="fas fa-check"></i> Быстрая загрузка</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Мобильные приложения</h4>
+                        <p>Разрабатываем нативные и кроссплатформенные мобильные приложения для iOS и Android.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Нативная разработка</li>
+                            <li><i class="fas fa-check"></i> Кроссплатформенность</li>
+                            <li><i class="fas fa-check"></i> Публикация в магазинах</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>UI/UX Дизайн</h4>
+                        <p>Создаем интуитивные и привлекательные интерфейсы, которые повышают конверсию и удовлетворенность пользователей.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Пользовательский опыт</li>
+                            <li><i class="fas fa-check"></i> Современный дизайн</li>
+                            <li><i class="fas fa-check"></i> Прототипирование</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Digital Marketing</h4>
+                        <p>Помогаем продвигать ваш бизнес в интернете с помощью эффективных digital-маркетинговых стратегий.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> SEO и SEM</li>
+                            <li><i class="fas fa-check"></i> SMM продвижение</li>
+                            <li><i class="fas fa-check"></i> Контент-маркетинг</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Поддержка и обслуживание</h4>
+                        <p>Обеспечиваем постоянную техническую поддержку и обслуживание ваших digital-продуктов.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 24/7 поддержка</li>
+                            <li><i class="fas fa-check"></i> Обновления и патчи</li>
+                            <li><i class="fas fa-check"></i> Мониторинг</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Индивидуальный дизайн</h4>
+                        <p>Создаем уникальные дизайн-концепции, которые отражают индивидуальность вашего бренда и бизнеса.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Уникальные концепции</li>
+                            <li><i class="fas fa-check"></i> Брендинг и айдентика</li>
+                            <li><i class="fas fa-check"></i> Креативные решения</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Отзывы клиентов</h2>
+                    <p class="section-subtitle">Что говорят о нас наши довольные клиенты</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="text-testimonial">
+                        <div class="testimonial-content">
+                            <p>"Олег Медведев и его команда создали для нас современный корпоративный сайт, который полностью отражает масштаб и надёжность нашей компании. Проект был выполнен в срок, с учётом всех наших пожеланий. Сайт работает стабильно, имеет удобную административную панель и привлекает новых клиентов."</p>
+                        </div>
+                        <div class="testimonial-info">
+                            <h5>Дмитрий Козлов</h5>
+                            <p>Директор по развитию, SIBAGRO Group</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-testimonial">
+                        <div class="testimonial-content">
+                            <p>"Отличная работа Марии Корзун и команды! Создали стильный и функциональный интернет-магазин, который помог нам увеличить продажи на 40%. Особенно впечатляет качество дизайна и удобство для пользователей. Рекомендуем всем, кто хочет получить профессиональный результат."</p>
+                        </div>
+                        <div class="testimonial-info">
+                            <h5>Анна Морозова</h5>
+                            <p>Основатель, RESPECT Shoes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-testimonial">
+                        <div class="testimonial-content">
+                            <p>"Профессиональный подход и высокое качество работы. Пётр Чепурченко разработал для нас B2B-сайт, который эффективно представляет нашу продукцию и привлекает серьёзных клиентов. Сотрудничество было комфортным на всех этапах проекта."</p>
+                        </div>
+                        <div class="testimonial-info">
+                            <h5>Сергей Волков</h5>
+                            <p>Технический директор, APEXMACH</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-testimonial">
+                        <div class="testimonial-content">
+                            <p>"Благодарим Илью Валиева за создание современного сайта для нашей сети дискаунтеров. Сайт получился лаконичным, удобным и эффективно решает задачи по привлечению клиентов. Проект выполнен в срок и с отличным качеством."</p>
+                        </div>
+                        <div class="testimonial-info">
+                            <h5>Елена Соколова</h5>
+                            <p>Маркетинг-менеджер, MAYAK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Наша команда</h2>
+                    <p class="section-subtitle">Профессионалы, которые создают качественные digital-решения</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/Oleg_Medvedev_vebmaster.by.webp" alt="Олег Медведев" class="img-fluid">
+                        </div>
+                        <div class="member-info">
+                            <h4>Олег Медведев</h4>
+                            <h5>Руководитель студии, программист</h5>
+                            <p>Организует работу команды и курирует проекты на всех этапах. Отвечает за стратегическое развитие студии и внедрение новых технологий. Сочетает лидерство с глубоким пониманием программирования и архитектуры систем.</p>
+                            <div class="member-stack">
+                                <span class="stack-tag">PHP</span>
+                                <span class="stack-tag">JavaScript</span>
+                                <span class="stack-tag">Node.js</span>
+                                <span class="stack-tag">React</span>
+                                <span class="stack-tag">Vue.js</span>
+                                <span class="stack-tag">WordPress</span>
+                                <span class="stack-tag">MySQL</span>
+                                <span class="stack-tag">PostgreSQL</span>
+                                <span class="stack-tag">HTML5</span>
+                                <span class="stack-tag">CSS3</span>
+                                <span class="stack-tag">Git</span>
+                                <span class="stack-tag">REST API</span>
+                                <span class="stack-tag">GraphQL</span>
+                                <span class="stack-tag">Docker</span>
+                                <span class="stack-tag">Kubernetes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/Marija_Korzun_vebmaster.by.webp" alt="Мария Корзун" class="img-fluid">
+                        </div>
+                        <div class="member-info">
+                            <h4>Мария Корзун</h4>
+                            <h5>Веб-дизайнер</h5>
+                            <p>Создаёт стильные и удобные интерфейсы, превращая идеи в яркие сайты. Любит минимализм, детали и креатив. Наша вдохновительница идей.</p>
+                            <div class="member-stack">
+                                <span class="stack-tag">Figma</span>
+                                <span class="stack-tag">Photoshop</span>
+                                <span class="stack-tag">Illustrator</span>
+                                <span class="stack-tag">After Effects</span>
+                                <span class="stack-tag">UI/UX</span>
+                                <span class="stack-tag">HTML5</span>
+                                <span class="stack-tag">CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/Pjotr_Chepurchenko_vebmaster.by.webp" alt="Пётр Чепурченко" class="img-fluid">
+                        </div>
+                        <div class="member-info">
+                            <h4>Пётр Чепурченко</h4>
+                            <h5>Программист</h5>
+                            <p>Отвечает за логику и функционал проектов студии. Делает сайты быстрыми, надёжными и удобными. Наш технический гуру и мастер невидимой магии кода.</p>
+                            <div class="member-stack">
+                                <span class="stack-tag">PHP</span>
+                                <span class="stack-tag">JavaScript</span>
+                                <span class="stack-tag">Node.js</span>
+                                <span class="stack-tag">Express</span>
+                                <span class="stack-tag">React</span>
+                                <span class="stack-tag">Vue.js</span>
+                                <span class="stack-tag">WordPress</span>
+                                <span class="stack-tag">MySQL</span>
+                                <span class="stack-tag">MongoDB</span>
+                                <span class="stack-tag">HTML5</span>
+                                <span class="stack-tag">CSS3</span>
+                                <span class="stack-tag">Git</span>
+                                <span class="stack-tag">REST API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/Ilja_Valiev_vebmaster.by.webp" alt="Илья Валиев" class="img-fluid">
+                        </div>
+                        <div class="member-info">
+                            <h4>Илья Валиев</h4>
+                            <h5>Программист</h5>
+                            <p>Разрабатывает современные веб-решения с упором на качество кода и производительность. Специализируется на сложных интеграциях и автоматизации бизнес-процессов. Умеет работать с аппаратно-программными системами. Наш архитектор комплексных решений.</p>
+                            <div class="member-stack">
+                                <span class="stack-tag">PHP</span>
+                                <span class="stack-tag">JavaScript</span>
+                                <span class="stack-tag">Node.js</span>
+                                <span class="stack-tag">React</span>
+                                <span class="stack-tag">Vue.js</span>
+                                <span class="stack-tag">WordPress</span>
+                                <span class="stack-tag">MySQL</span>
+                                <span class="stack-tag">PostgreSQL</span>
+                                <span class="stack-tag">HTML5</span>
+                                <span class="stack-tag">CSS3</span>
+                                <span class="stack-tag">Git</span>
+                                <span class="stack-tag">REST API</span>
+                                <span class="stack-tag">GraphQL</span>
+                                <span class="stack-tag">Arduino</span>
+                                <span class="stack-tag">Raspberry Pi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Свяжитесь с нами</h2>
+                    <p class="section-subtitle">Готовы начать работу над вашим проектом?</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-card">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-info">
+                                    <h4>Контакты</h4>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <div>
+                                            <h6>Телефон</h6>
+                                            <p><a href="tel:+375297700651">+375297700651</a></p>
+                                            <p><a href="tel:+375299935865">+375299935865</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <div>
+                                            <h6>Email</h6>
+                                            <p><a href="mailto:vebmasterby.by@gmail.com">vebmasterby.by@gmail.com</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div>
+                                            <h6>Адрес</h6>
+                                            <p>Минск, ул. Прушинских 31 А, бизнес центр Портал</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <form class="contact-form" id="contactForm">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" name="name" placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="tel" class="form-control" name="phone" placeholder="Телефон">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        <i class="fas fa-paper-plane me-2"></i>Отправить заявку
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-brand">
+                        <h5><i class="fas fa-code me-2"></i>VebMaster.by</h5>
+                        <p>Создаем современные digital-решения для развития вашего бизнеса</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Услуги</h6>
+                    <ul class="footer-links">
+                        <li><a href="#services">Веб-разработка</a></li>
+                        <li><a href="#services">Мобильные приложения</a></li>
+                        <li><a href="#services">UI/UX Дизайн</a></li>
+                        <li><a href="#services">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Компания</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home">О нас</a></li>
+                        <li><a href="#portfolio">Портфолио</a></li>
+                        <li><a href="#testimonials">Отзывы</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 VebMaster.by. Все права защищены. УНП: HA7143517</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-social">
+                        <a href="https://t.me/vebmasterby" target="_blank" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="https://vk.com/vebmasterby" target="_blank" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="https://instagram.com/vebmasterby" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html> 
